@@ -10,6 +10,11 @@ import BlogCreate from '../components/Blogs/CreateBlog.vue'
 import BlogEdit from '../components/Blogs/EditBlog.vue'
 import BlogShow from '../components/Blogs/ShowBlog.vue'
 
+import EmployeeIndex from '../components/Employee/IndexEmployee.vue'
+import EmployeeCreate from '../components/Employee/CreateEmployee.vue'
+import EmployeeEdit from '../components/Employee/EditEmployee.vue'
+import EmployeeShow from '../components/Employee/ShowEmployee.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -63,6 +68,27 @@ const router = createRouter({
       path: '/blog/:blogId',
       name: 'blog',
       component: BlogShow
+    },
+
+    {
+      path: '/employees',
+      name: 'employees',
+      component: EmployeeIndex
+    },
+    {
+      path: '/employee/create',
+      name: 'employee-create',
+      component: EmployeeCreate
+    },
+    {
+      path: '/employee/edit/:employeeId',
+      name: 'employee-edit',
+      component: EmployeeEdit
+    },
+    {
+      path: '/employee/:employeeId',
+      name: 'employee',
+      component: EmployeeShow
     },
   ]
 })
